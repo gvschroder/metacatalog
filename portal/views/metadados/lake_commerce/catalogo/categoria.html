@@ -1,0 +1,69 @@
+<div class="metadata">
+    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
+    <p><span>Esquema:</span> catalogo</p>
+    <p><span>Tabela:</span> categoria</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena as categorias dos produtos.</p>
+    
+    <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descri&ccedil;&atilde;o</th>
+                <th>Tipo</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>pk_categoria</td>
+                <td>Identificador único da categoria.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>nome</td>
+                <td>Nome da categoria.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>descricao</td>
+                <td>Descrição da categoria.</td>
+                <td>TEXT</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,32 @@
+catalog: lake_locadora
+schema: locacao
+name: cliente
+description: "Tabela que armazena os clientes da locadora."
+tags:
+  update_method: batch
+columns:
+  - name: pk_cliente
+    type: STRING
+    description: "Identificador único do cliente."
+    tags:
+      pii: false
+  - name: nome
+    type: STRING
+    description: "Nome completo do cliente."
+    tags:
+      pii: true
+  - name: cpf
+    type: STRING
+    description: "CPF do cliente."
+    tags:
+      pii: true
+  - name: telefone
+    type: STRING
+    description: "Telefone de contato do cliente."
+    tags:
+      pii: true
+  - name: data_cadastro
+    type: TIMESTAMP
+    description: "Data de cadastro do cliente."
+    tags:
+      pii: false

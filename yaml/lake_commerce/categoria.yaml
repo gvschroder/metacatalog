@@ -1,0 +1,22 @@
+catalog: lake_commerce
+schema: catalogo
+name: categoria
+description: "Tabela que armazena as categorias dos produtos."
+tags:
+  update_method: batch
+columns:
+  - name: pk_categoria
+    type: STRING
+    description: "Identificador único da categoria."
+    tags:
+      pii: false
+  - name: nome
+    type: STRING
+    description: "Nome da categoria."
+    tags:
+      pii: false
+  - name: descricao
+    type: TEXT
+    description: "Descrição da categoria."
+    tags:
+      pii: false

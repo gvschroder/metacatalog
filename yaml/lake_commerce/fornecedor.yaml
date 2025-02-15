@@ -1,0 +1,27 @@
+catalog: lake_commerce
+schema: catalogo
+name: fornecedor
+description: "Tabela que armazena os fornecedores dos produtos."
+tags:
+  update_method: batch
+columns:
+  - name: pk_fornecedor
+    type: STRING
+    description: "Identificador único do fornecedor."
+    tags:
+      pii: false
+  - name: nome
+    type: STRING
+    description: "Nome do fornecedor."
+    tags:
+      pii: false
+  - name: cnpj
+    type: STRING
+    description: "CNPJ do fornecedor."
+    tags:
+      pii: true
+  - name: contato
+    type: STRING
+    description: "Contato do fornecedor."
+    tags:
+      pii: true

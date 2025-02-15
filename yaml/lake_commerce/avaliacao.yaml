@@ -1,0 +1,42 @@
+catalog: lake_commerce
+schema: vendas
+name: avaliacao
+description: "Tabela que armazena as avaliações dos produtos feitas pelos usuários."
+tags:
+  update_method: batch
+columns:
+  - name: pk_avaliacao
+    type: STRING
+    description: "Identificador único da avaliação."
+    tags:
+      pii: false
+  - name: fk_produto
+    type: STRING
+    description: "Chave estrangeira que referencia o produto."
+    foreign_key:
+      catalog: lake_commerce
+      schema: catalogo
+      table: produto
+      column: pk_produto
+    tags:
+      pii: false
+  - name: fk_usuario
+    type: STRING
+    description: "Chave estrangeira que referencia o usuário."
+    foreign_key:
+      catalog: lake_commerce
+      schema: vendas
+      table: usuario
+      column: pk_usuario
+    tags:
+      pii: false
+  - name: nota
+    type: INT
+    description: "Nota dada pelo usuário (1 a 5)."
+    tags:
+      pii: false
+  - name: comentario
+    type: TEXT
+    description: "Comentário do usuário sobre o produto."
+    tags:
+      pii: true

@@ -1,0 +1,32 @@
+catalog: lake_locadora
+schema: locacao
+name: filme
+description: "Tabela que armazena os filmes disponíveis para locação."
+tags:
+  update_method: batch
+columns:
+  - name: pk_filme
+    type: STRING
+    description: "Identificador único do filme."
+    tags:
+      pii: false
+  - name: titulo
+    type: STRING
+    description: "Título do filme."
+    tags:
+      pii: false
+  - name: genero
+    type: STRING
+    description: "Gênero do filme."
+    tags:
+      pii: false
+  - name: duracao
+    type: INT
+    description: "Duração do filme em minutos."
+    tags:
+      pii: false
+  - name: classificacao
+    type: STRING
+    description: "Classificação indicativa do filme."
+    tags:
+      pii: false

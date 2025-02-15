@@ -2,7 +2,7 @@
     <p><span>Cat&aacute;logo:</span> lake_commerce</p>
     <p><span>Esquema:</span> vendas</p>
     <p><span>Tabela:</span> item_pedido</p>
-    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que contém os itens incluídos em cada pedido, detalhando os produtos comprados e suas quantidades.</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que contém os itens incluídos em cada pedido.</p>
     
     <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
     
@@ -36,7 +36,7 @@
             
             <tr>
                 <td>fk_pedido</td>
-                <td>Chave estrangeira alfanumérica que referencia a tabela consolidada de pedidos.</td>
+                <td>Chave estrangeira que referencia o pedido.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -56,7 +56,7 @@
             
             <tr>
                 <td>fk_produto</td>
-                <td>Chave estrangeira alfanumérica que referencia a tabela consolidada de produtos.</td>
+                <td>Chave estrangeira que referencia o produto.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -76,7 +76,7 @@
             
             <tr>
                 <td>quantidade</td>
-                <td>Quantidade do produto comprada neste pedido.</td>
+                <td>Quantidade do produto comprada.</td>
                 <td>INT</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -106,7 +106,7 @@
             
             <tr>
                 <td>subtotal</td>
-                <td>Valor total do item no pedido (quantidade * preço_unitário).</td>
+                <td>Valor total do item no pedido (quantidade * preco_unitario).</td>
                 <td>DECIMAL(12,2)</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">

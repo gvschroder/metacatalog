@@ -1,0 +1,27 @@
+catalog: lake_commerce
+schema: vendas
+name: cupom
+description: "Tabela que armazena os cupons de desconto."
+tags:
+  update_method: batch
+columns:
+  - name: pk_cupom
+    type: STRING
+    description: "Identificador único do cupom."
+    tags:
+      pii: false
+  - name: codigo
+    type: STRING
+    description: "Código do cupom."
+    tags:
+      pii: false
+  - name: desconto
+    type: DECIMAL(5,2)
+    description: "Valor do desconto (em porcentagem ou valor fixo)."
+    tags:
+      pii: false
+  - name: validade
+    type: DATE
+    description: "Data de validade do cupom."
+    tags:
+      pii: false

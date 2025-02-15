@@ -1,8 +1,8 @@
 <div class="metadata">
     <p><span>Cat&aacute;logo:</span> lake_commerce</p>
-    <p><span>Esquema:</span> vendas</p>
-    <p><span>Tabela:</span> pedido</p>
-    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena os pedidos realizados pelos usuários.</p>
+    <p><span>Esquema:</span> catalogo</p>
+    <p><span>Tabela:</span> produto_fornecedor</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que relaciona produtos e fornecedores.</p>
     
     <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
     
@@ -20,8 +20,8 @@
         <tbody>
             
             <tr>
-                <td>pk_pedido</td>
-                <td>Identificador único do pedido.</td>
+                <td>pk_produto_fornecedor</td>
+                <td>Identificador único da relação entre produto e fornecedor.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -35,16 +35,16 @@
             </tr>
             
             <tr>
-                <td>fk_usuario</td>
-                <td>Chave estrangeira que referencia o usuário.</td>
+                <td>fk_produto</td>
+                <td>Chave estrangeira que referencia o produto.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
                     
                     <p><span>Cat&aacute;logo:</span> lake_commerce</p>
-                    <p><span>Esquema</span> vendas</p>
-                    <p><span>Tabela:</span> usuario</p>
-                    <p><span>Coluna:</span> pk_usuario</p>
+                    <p><span>Esquema</span> catalogo</p>
+                    <p><span>Tabela:</span> produto</p>
+                    <p><span>Coluna:</span> pk_produto</p>
                     
                 </td>
                 <td>
@@ -55,27 +55,17 @@
             </tr>
             
             <tr>
-                <td>data_pedido</td>
-                <td>Data em que o pedido foi realizado.</td>
-                <td>TIMESTAMP</td>
-                <td>N&atilde;o</td>
-                <td class="col_fk">
-                    
-                </td>
-                <td>
-                    
-                    <span class="badge">pii: False</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td>status</td>
-                <td>Status do pedido (ex: 'pendente', 'enviado', 'entregue').</td>
+                <td>fk_fornecedor</td>
+                <td>Chave estrangeira que referencia o fornecedor.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
                     
+                    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
+                    <p><span>Esquema</span> catalogo</p>
+                    <p><span>Tabela:</span> fornecedor</p>
+                    <p><span>Coluna:</span> pk_fornecedor</p>
+                    
                 </td>
                 <td>
                     
@@ -85,9 +75,9 @@
             </tr>
             
             <tr>
-                <td>total</td>
-                <td>Valor total do pedido.</td>
-                <td>DECIMAL(12,2)</td>
+                <td>preco_compra</td>
+                <td>Preço de compra do produto.</td>
+                <td>DECIMAL(10,2)</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
                     

@@ -1,8 +1,8 @@
 <div class="metadata">
     <p><span>Cat&aacute;logo:</span> lake_commerce</p>
     <p><span>Esquema:</span> vendas</p>
-    <p><span>Tabela:</span> pedido</p>
-    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena os pedidos realizados pelos usuários.</p>
+    <p><span>Tabela:</span> carrinho</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena os carrinhos de compras dos usuários.</p>
     
     <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
     
@@ -20,8 +20,8 @@
         <tbody>
             
             <tr>
-                <td>pk_pedido</td>
-                <td>Identificador único do pedido.</td>
+                <td>pk_carrinho</td>
+                <td>Identificador único do carrinho.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -55,39 +55,9 @@
             </tr>
             
             <tr>
-                <td>data_pedido</td>
-                <td>Data em que o pedido foi realizado.</td>
+                <td>data_criacao</td>
+                <td>Data de criação do carrinho.</td>
                 <td>TIMESTAMP</td>
-                <td>N&atilde;o</td>
-                <td class="col_fk">
-                    
-                </td>
-                <td>
-                    
-                    <span class="badge">pii: False</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td>status</td>
-                <td>Status do pedido (ex: 'pendente', 'enviado', 'entregue').</td>
-                <td>STRING</td>
-                <td>N&atilde;o</td>
-                <td class="col_fk">
-                    
-                </td>
-                <td>
-                    
-                    <span class="badge">pii: False</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td>total</td>
-                <td>Valor total do pedido.</td>
-                <td>DECIMAL(12,2)</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
                     

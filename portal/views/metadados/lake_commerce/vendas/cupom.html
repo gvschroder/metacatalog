@@ -1,8 +1,8 @@
 <div class="metadata">
     <p><span>Cat&aacute;logo:</span> lake_commerce</p>
     <p><span>Esquema:</span> vendas</p>
-    <p><span>Tabela:</span> pedido</p>
-    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena os pedidos realizados pelos usuários.</p>
+    <p><span>Tabela:</span> cupom</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que armazena os cupons de desconto.</p>
     
     <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
     
@@ -20,8 +20,8 @@
         <tbody>
             
             <tr>
-                <td>pk_pedido</td>
-                <td>Identificador único do pedido.</td>
+                <td>pk_cupom</td>
+                <td>Identificador único do cupom.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -35,43 +35,8 @@
             </tr>
             
             <tr>
-                <td>fk_usuario</td>
-                <td>Chave estrangeira que referencia o usuário.</td>
-                <td>STRING</td>
-                <td>N&atilde;o</td>
-                <td class="col_fk">
-                    
-                    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
-                    <p><span>Esquema</span> vendas</p>
-                    <p><span>Tabela:</span> usuario</p>
-                    <p><span>Coluna:</span> pk_usuario</p>
-                    
-                </td>
-                <td>
-                    
-                    <span class="badge">pii: False</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td>data_pedido</td>
-                <td>Data em que o pedido foi realizado.</td>
-                <td>TIMESTAMP</td>
-                <td>N&atilde;o</td>
-                <td class="col_fk">
-                    
-                </td>
-                <td>
-                    
-                    <span class="badge">pii: False</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td>status</td>
-                <td>Status do pedido (ex: 'pendente', 'enviado', 'entregue').</td>
+                <td>codigo</td>
+                <td>Código do cupom.</td>
                 <td>STRING</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
@@ -85,9 +50,24 @@
             </tr>
             
             <tr>
-                <td>total</td>
-                <td>Valor total do pedido.</td>
-                <td>DECIMAL(12,2)</td>
+                <td>desconto</td>
+                <td>Valor do desconto (em porcentagem ou valor fixo).</td>
+                <td>DECIMAL(5,2)</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>validade</td>
+                <td>Data de validade do cupom.</td>
+                <td>DATE</td>
                 <td>N&atilde;o</td>
                 <td class="col_fk">
                     

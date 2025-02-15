@@ -1,0 +1,37 @@
+catalog: lake_commerce
+schema: vendas
+name: item_carrinho
+description: "Tabela que armazena os itens adicionados ao carrinho de compras."
+tags:
+  update_method: batch
+columns:
+  - name: pk_item_carrinho
+    type: STRING
+    description: "Identificador único do item no carrinho."
+    tags:
+      pii: false
+  - name: fk_carrinho
+    type: STRING
+    description: "Chave estrangeira que referencia o carrinho."
+    foreign_key:
+      catalog: lake_commerce
+      schema: vendas
+      table: carrinho
+      column: pk_carrinho
+    tags:
+      pii: false
+  - name: fk_produto
+    type: STRING
+    description: "Chave estrangeira que referencia o produto."
+    foreign_key:
+      catalog: lake_commerce
+      schema: catalogo
+      table: produto
+      column: pk_produto
+    tags:
+      pii: false
+  - name: quantidade
+    type: INT
+    description: "Quantidade do produto no carrinho."
+    tags:
+      pii: false

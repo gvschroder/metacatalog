@@ -1,7 +1,7 @@
 catalog: lake_commerce
 schema: vendas
 name: item_pedido
-description: "Tabela que contém os itens incluídos em cada pedido, detalhando os produtos comprados e suas quantidades."
+description: "Tabela que contém os itens incluídos em cada pedido."
 tags:
   update_method: batch
 columns:
@@ -12,7 +12,7 @@ columns:
       pii: false
   - name: fk_pedido
     type: STRING
-    description: "Chave estrangeira alfanumérica que referencia a tabela consolidada de pedidos."
+    description: "Chave estrangeira que referencia o pedido."
     foreign_key:
       catalog: lake_commerce
       schema: vendas
@@ -22,7 +22,7 @@ columns:
       pii: false
   - name: fk_produto
     type: STRING
-    description: "Chave estrangeira alfanumérica que referencia a tabela consolidada de produtos."
+    description: "Chave estrangeira que referencia o produto."
     foreign_key:
       catalog: lake_commerce
       schema: catalogo
@@ -32,7 +32,7 @@ columns:
       pii: false
   - name: quantidade
     type: INT
-    description: "Quantidade do produto comprada neste pedido."
+    description: "Quantidade do produto comprada."
     tags:
       pii: false
   - name: preco_unitario
@@ -42,6 +42,6 @@ columns:
       pii: false
   - name: subtotal
     type: DECIMAL(12,2)
-    description: "Valor total do item no pedido (quantidade * preço_unitário)."
+    description: "Valor total do item no pedido (quantidade * preco_unitario)."
     tags:
       pii: false

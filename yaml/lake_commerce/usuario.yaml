@@ -1,0 +1,32 @@
+catalog: lake_commerce
+schema: vendas
+name: usuario
+description: "Tabela que armazena os dados dos usuários do e-commerce."
+tags:
+  update_method: batch
+columns:
+  - name: pk_usuario
+    type: STRING
+    description: "Identificador único do usuário."
+    tags:
+      pii: false
+  - name: nome
+    type: STRING
+    description: "Nome completo do usuário."
+    tags:
+      pii: true
+  - name: email
+    type: STRING
+    description: "E-mail do usuário."
+    tags:
+      pii: true
+  - name: senha
+    type: STRING
+    description: "Senha criptografada do usuário."
+    tags:
+      pii: true
+  - name: data_cadastro
+    type: TIMESTAMP
+    description: "Data de cadastro do usuário."
+    tags:
+      pii: false
