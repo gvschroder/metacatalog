@@ -1,0 +1,37 @@
+catalog: lake_commerce
+schema: vendas
+name: cliente
+description: "Tabela que contém informações sobre os clientes cadastrados na plataforma de e-commerce."
+tags:
+  update_method: batch
+columns:
+  - name: pk_cliente
+    type: STRING
+    description: "Identificador único do cliente."
+    tags:
+      pii: false
+  - name: nome_completo
+    type: STRING
+    description: "Nome completo do cliente."
+    tags:
+      pii: true
+  - name: email
+    type: STRING
+    description: "Endereço de e-mail do cliente."
+    tags:
+      pii: true
+  - name: telefone
+    type: STRING
+    description: "Número de telefone do cliente."
+    tags:
+      pii: true
+  - name: endereco
+    type: STRING
+    description: "Endereço completo de entrega do cliente."
+    tags:
+      pii: true
+  - name: data_cadastro
+    type: TIMESTAMP
+    description: "Data e hora do cadastro do cliente na plataforma."
+    tags:
+      pii: false

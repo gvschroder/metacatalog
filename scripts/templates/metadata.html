@@ -1,0 +1,44 @@
+<div class="metadata">
+    <p><span>Cat&aacute;logo:</span> {{ catalog }}</p>
+    <p><span>Esquema:</span> {{ schema }}</p>
+    <p><span>Tabela:</span> {{ name }}</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> {{ description }}</p>
+    {% if tags.update_method %}
+    <p><span>Método de atualiza&ccedil;&atilde;o:</span> {{ tags.update_method }}</p>
+    {% endif %}
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descri&ccedil;&atilde;o</th>
+                <th>Tipo</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for col in columns %}
+            <tr>
+                <td>{{ col.name }}</td>
+                <td>{{ col.description }}</td>
+                <td>{{ col.type }}</td>
+                <td>{{ "Sim" if col.primary_key else "N&atilde;o" }}</td>
+                <td class="col_fk">
+                    {% if col.foreign_key %}
+                    <p><span>Cat&aacute;logo:</span> {{ col.foreign_key.catalog }}</p>
+                    <p><span>Esquema</span> {{ col.foreign_key.schema }}</p>
+                    <p><span>Tabela:</span> {{ col.foreign_key.table }}</p>
+                    <p><span>Coluna:</span> {{ col.foreign_key.column }}</p>
+                    {% endif %}
+                </td>
+                <td>
+                    {% for key, value in col.tags.items() %}
+                    <span class="badge">{{ key }}: {{ value }}</span>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

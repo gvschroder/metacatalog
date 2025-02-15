@@ -1,0 +1,42 @@
+catalog: lake_commerce
+schema: vendas
+name: pedido
+description: "Tabela que contém informações sobre os pedidos realizados pelos clientes na plataforma."
+tags:
+  update_method: batch
+columns:
+  - name: pk_pedido
+    type: STRING
+    description: "Identificador único do pedido."
+    tags:
+      pii: false
+  - name: fk_cliente
+    type: STRING
+    description: "Chave estrangeira alfanumérica que referencia a tabela consolidada de clientes."
+    foreign_key:
+      catalog: lake_commerce
+      schema: vendas
+      table: cliente
+      column: pk_cliente
+    tags:
+      pii: false
+  - name: data_pedido
+    type: TIMESTAMP
+    description: "Data e hora em que o pedido foi realizado."
+    tags:
+      pii: false
+  - name: total_pedido
+    type: DECIMAL(12,2)
+    description: "Valor total do pedido."
+    tags:
+      pii: false
+  - name: status_pedido
+    type: STRING
+    description: "Status do pedido. Possíveis valores: Aguardando Pagamento, Pago, Enviado, Entregue, Cancelado."
+    tags:
+      pii: false
+  - name: metodo_pagamento
+    type: STRING
+    description: "Método de pagamento utilizado no pedido. Exemplo: Cartão de Crédito, Boleto, Pix."
+    tags:
+      pii: false

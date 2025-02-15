@@ -1,0 +1,119 @@
+<div class="metadata">
+    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
+    <p><span>Esquema:</span> vendas</p>
+    <p><span>Tabela:</span> pedido</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que contém informações sobre os pedidos realizados pelos clientes na plataforma.</p>
+    
+    <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descri&ccedil;&atilde;o</th>
+                <th>Tipo</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>pk_pedido</td>
+                <td>Identificador único do pedido.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>fk_cliente</td>
+                <td>Chave estrangeira alfanumérica que referencia a tabela consolidada de clientes.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
+                    <p><span>Esquema</span> vendas</p>
+                    <p><span>Tabela:</span> cliente</p>
+                    <p><span>Coluna:</span> pk_cliente</p>
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>data_pedido</td>
+                <td>Data e hora em que o pedido foi realizado.</td>
+                <td>TIMESTAMP</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>total_pedido</td>
+                <td>Valor total do pedido.</td>
+                <td>DECIMAL(12,2)</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>status_pedido</td>
+                <td>Status do pedido. Possíveis valores: Aguardando Pagamento, Pago, Enviado, Entregue, Cancelado.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>metodo_pagamento</td>
+                <td>Método de pagamento utilizado no pedido. Exemplo: Cartão de Crédito, Boleto, Pix.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

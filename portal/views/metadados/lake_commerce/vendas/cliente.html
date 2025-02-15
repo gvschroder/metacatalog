@@ -1,0 +1,114 @@
+<div class="metadata">
+    <p><span>Cat&aacute;logo:</span> lake_commerce</p>
+    <p><span>Esquema:</span> vendas</p>
+    <p><span>Tabela:</span> cliente</p>
+    <p><span>Descri&ccedil;&atilde;o:</span> Tabela que contém informações sobre os clientes cadastrados na plataforma de e-commerce.</p>
+    
+    <p><span>Método de atualiza&ccedil;&atilde;o:</span> batch</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descri&ccedil;&atilde;o</th>
+                <th>Tipo</th>
+                <th>PK</th>
+                <th>FK</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>pk_cliente</td>
+                <td>Identificador único do cliente.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>nome_completo</td>
+                <td>Nome completo do cliente.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: True</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>email</td>
+                <td>Endereço de e-mail do cliente.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: True</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>telefone</td>
+                <td>Número de telefone do cliente.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: True</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>endereco</td>
+                <td>Endereço completo de entrega do cliente.</td>
+                <td>STRING</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: True</span>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>data_cadastro</td>
+                <td>Data e hora do cadastro do cliente na plataforma.</td>
+                <td>TIMESTAMP</td>
+                <td>N&atilde;o</td>
+                <td class="col_fk">
+                    
+                </td>
+                <td>
+                    
+                    <span class="badge">pii: False</span>
+                    
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

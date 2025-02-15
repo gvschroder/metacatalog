@@ -1,0 +1,47 @@
+catalog: lake_commerce
+schema: vendas
+name: item_pedido
+description: "Tabela que contém os itens incluídos em cada pedido, detalhando os produtos comprados e suas quantidades."
+tags:
+  update_method: batch
+columns:
+  - name: pk_item_pedido
+    type: STRING
+    description: "Identificador único do item no pedido."
+    tags:
+      pii: false
+  - name: fk_pedido
+    type: STRING
+    description: "Chave estrangeira alfanumérica que referencia a tabela consolidada de pedidos."
+    foreign_key:
+      catalog: lake_commerce
+      schema: vendas
+      table: pedido
+      column: pk_pedido
+    tags:
+      pii: false
+  - name: fk_produto
+    type: STRING
+    description: "Chave estrangeira alfanumérica que referencia a tabela consolidada de produtos."
+    foreign_key:
+      catalog: lake_commerce
+      schema: catalogo
+      table: produto
+      column: pk_produto
+    tags:
+      pii: false
+  - name: quantidade
+    type: INT
+    description: "Quantidade do produto comprada neste pedido."
+    tags:
+      pii: false
+  - name: preco_unitario
+    type: DECIMAL(10,2)
+    description: "Preço unitário do produto no momento da compra."
+    tags:
+      pii: false
+  - name: subtotal
+    type: DECIMAL(12,2)
+    description: "Valor total do item no pedido (quantidade * preço_unitário)."
+    tags:
+      pii: false

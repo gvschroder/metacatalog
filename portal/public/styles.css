@@ -1,0 +1,214 @@
+
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-4');
+@import url('https://fonts.cdnfonts.com/css/roboto');
+
+body {
+    font-family: 'Segoe UI', 'Segoe UI Web (West European)', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: #006271;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.page-banner {
+    color: white;
+    background-color: #005865;
+    padding: 15px;
+    text-align: left;
+    font-size: 24px;
+    padding-left: calc(50% - 600px);
+}
+
+.page-banner a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-banner a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    color: #444;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #006271;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+}
+
+.badge {
+    background-color: #24959b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+ul.catalog, ul.search_results {
+    list-style: none;
+    padding: 0px;
+    border-left: #005865 4px solid;
+}
+
+ul.catalog li, ul.search_results li{
+    margin: 15px 0px 15px 10px;
+}
+
+ul.catalog li a, ul.search_results li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #444;
+    font-size: 20px;
+    font-weight: normal;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ul.catalog li a::after, ul.search_results li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background-color: #006271;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul.catalog li a:hover, ul.search_results li a:hover {
+    color: #006271;
+    transform: translateX(5px);
+}
+
+ul.catalog li a:hover::after, ul.search_results li a:hover::after {
+    transform: scaleX(1);
+}
+
+.metadata p {
+    margin: 5px 0px;
+    font-size: 20px;
+}
+
+.metadata p span {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.metadata table {
+    margin-top: 20px;
+}
+
+.metadata table thead th {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.metadata table tbody td, .metadata table tbody td p {
+    font-size: 16px;
+}
+
+.metadata .col_fk p {
+    white-space: nowrap;
+}
+
+#searchForm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #006271;
+}
+
+button {
+    background: #006271;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #24959b;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.not_found {
+    font-size: 40px;
+    text-align: center;
+    color: #888;
+}
+
+.preview * {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    color: red;
+}
